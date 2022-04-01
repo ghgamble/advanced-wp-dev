@@ -29,5 +29,7 @@ function learnwp_config() {
   // Add featured image for post
   add_theme_support('post-thumbnails');
 
+  add_theme_support('post-formats', array('video', 'image'));
+
 }
 add_action('after_setup_theme', 'learnwp_config', 0);
