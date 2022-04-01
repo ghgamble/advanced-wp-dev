@@ -8,10 +8,26 @@ function load_scripts() {
 }
 add_action('wp_enqueue_scripts', 'load_scripts');
 
-// Create menus for theme, otherwise wouldn't display in admin
-register_nav_menus (
-  array (
-    'main_menu' => 'Main Menu',
-    'footer_menu' => 'Footer Menu'
-  )
-);
+// Main configuration function
+function learnwp_config() {
+
+  // Create menus for theme, otherwise wouldn't display in admin
+  register_nav_menus (
+    array (
+      'main_menu' => 'Main Menu',
+      'footer_menu' => 'Footer Menu'
+    )
+  );
+
+  // Add header image
+  $args = array (
+    'height' => 225,
+    'width' => 1920
+  );
+  add_theme_support('custom-header', $args);
+
+  // Add featured image for post
+  add_theme_support('post-thumbnails');
+
+}
+add_action('after_setup_theme', 'learnwp_config', 0);

@@ -16,7 +16,7 @@
           </div>
         </div>
       </section>
-      <section class="menu-area">
+      <section class="main-menu">
         <div class="container">
           <div class="align">
             <div class="row">
