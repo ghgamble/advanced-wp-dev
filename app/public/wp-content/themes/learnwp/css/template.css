@@ -22,6 +22,7 @@ a{text-decoration: none;}
 .main-menu ul li:last-child{ margin: 0; }
 .main-menu ul li a{ text-transform: uppercase; color: #4c1b1b; text-decoration: none;}
 .main-menu ul  li.current-menu-item a{ color:#e58888; }
+label#search-form-submit {display: flex;}
 
 /* Slider */
 .slide{ padding: 25px 0; }
