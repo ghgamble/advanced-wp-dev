@@ -7,6 +7,11 @@
       while(have_posts()):
         the_post();
         get_template_part('template-parts/content', 'single');
+        if(comments_open() || get_comments_number()):
+          comments_template();
+          // If you want to make a different one from the comments standard default comments.php
+          // comments_template('/comments-other-template.php');
+        endif;
       endwhile;
       ?>
     </div>
