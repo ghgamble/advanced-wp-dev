@@ -15,6 +15,12 @@
           // comments_template('/comments-other-template.php');
         endif;
       endwhile;
+      the_posts_pagination (
+        array (
+          'prev_text' => 'Previous',
+          'next_text' => 'Next'
+        )
+      );
       ?>
     </div>
   </div>
